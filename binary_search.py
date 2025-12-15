@@ -32,6 +32,12 @@ Binary search is an efficient algorithm for finding an item from a *sorted* list
     *   If the element at `mid` is *greater than* the `target`, it means the target (if it exists) must be in the left half of the current sub-list. So, discard the right half by moving `right = mid - 1`.
 4.  **Repeat**: Continue steps 2 and 3 until `left` is greater than `right`. If the loop finishes and the target hasn't been found, it means the target is not in the list, so return -1.
 
+## Time and Space Complexity:
+*   **Time Complexity: O(log n)**
+    The algorithm repeatedly divides the search interval in half. This logarithmic behavior makes binary search very efficient for large datasets.
+*   **Space Complexity: O(1)**
+    Binary search uses a constant amount of extra space, regardless of the size of the input array, as it only stores a few variables (`left`, `right`, `mid`, `target`).
+
 ## Dry Run Example:
 
 Let's trace `binary_search([1, 3, 5, 7, 9, 11, 13, 15, 17], 7)`:
